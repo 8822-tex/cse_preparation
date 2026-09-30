@@ -1,0 +1,963 @@
+/* =========================================================
+   KRISHNA'S B.TECH MATHEMATICS SOLVER
+   STYLE.CSS
+   ========================================================= */
+
+
+/* =========================
+   1. GLOBAL VARIABLES
+   ========================= */
+
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #697386;
+    --primary: #315bea;
+    --primary-dark: #2447c5;
+    --border: #e4e8f0;
+    --soft: #eef2ff;
+    --success: #16845b;
+    --shadow: 0 8px 25px rgba(31, 42, 68, 0.08);
+
+    --radius-small: 10px;
+    --radius-medium: 16px;
+    --radius-large: 22px;
+}
+
+
+/* =========================
+   2. DARK MODE VARIABLES
+   ========================= */
+
+body.dark-mode {
+    --bg: #0d1220;
+    --card: #151c2e;
+    --text: #f1f4fb;
+    --muted: #a7b0c2;
+    --primary: #6d8cff;
+    --primary-dark: #5576f0;
+    --border: #273149;
+    --soft: #1d2740;
+    --success: #42c995;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   3. RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    min-height: 100vh;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+input {
+    outline: none;
+}
+
+
+/* =========================
+   4. HEADER
+   ========================= */
+
+.header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px;
+
+    background: var(--card);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+
+.logo {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    box-shadow: 0 6px 15px rgba(49, 91, 234, 0.25);
+}
+
+
+.logo-area h1 {
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+
+.logo-area p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--soft);
+    color: var(--text);
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    transition: 0.25s ease;
+}
+
+
+.theme-btn:active {
+    transform: scale(0.92);
+}
+
+
+/* =========================
+   5. MAIN CONTAINER
+   ========================= */
+
+.main-container {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 20px 16px 0;
+}
+
+
+/* =========================
+   6. WELCOME SECTION
+   ========================= */
+
+.welcome-section {
+    padding: 25px 4px 20px;
+}
+
+
+.small-title {
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome-section h2 {
+    font-size: 31px;
+    line-height: 1.15;
+
+    letter-spacing: -0.7px;
+}
+
+
+.welcome-section h2 span {
+    color: var(--primary);
+}
+
+
+.welcome-text {
+    max-width: 650px;
+
+    margin-top: 13px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   7. SEARCH
+   ========================= */
+
+.search-section {
+    margin-bottom: 27px;
+}
+
+
+.search-box {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow);
+
+    transition: 0.25s ease;
+}
+
+
+.search-box:focus-within {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(49, 91, 234, 0.1);
+}
+
+
+.search-box span {
+    font-size: 17px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+
+.search-box input::placeholder {
+    color: var(--muted);
+}
+
+
+/* =========================
+   8. SECTION HEADING
+   ========================= */
+
+.section-heading {
+    margin-bottom: 14px;
+}
+
+
+.section-heading h3 {
+    font-size: 20px;
+}
+
+
+.section-heading p {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   9. MODULE SECTION
+   ========================= */
+
+.modules-section {
+    margin-bottom: 32px;
+}
+
+
+/* =========================
+   10. MODULE CARD
+   ========================= */
+
+.module-card {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.module-card:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 12px 30px rgba(31, 42, 68, 0.11);
+}
+
+
+.module-card:active {
+    transform: scale(0.99);
+}
+
+
+/* Module number */
+
+.module-number {
+    min-width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--soft);
+
+    color: var(--primary);
+
+    border-radius: 13px;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* Module information */
+
+.module-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.module-info h4 {
+    font-size: 15px;
+
+    line-height: 1.35;
+}
+
+
+.module-info p {
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+
+.topic-count {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* Module arrow */
+
+.open-module {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--soft);
+
+    color: var(--primary);
+
+    border-radius: 11px;
+
+    font-size: 20px;
+
+    transition: 0.2s ease;
+}
+
+
+.open-module:hover {
+    background: var(--primary);
+    color: white;
+}
+
+
+.open-module:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================
+   11. SOLVER SECTION
+   ========================= */
+
+.solver-section {
+    padding: 18px;
+
+    margin-bottom: 32px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow);
+}
+
+
+.solver-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.solver-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--soft);
+
+    border-radius: 13px;
+
+    font-size: 21px;
+}
+
+
+.solver-header h3 {
+    font-size: 17px;
+}
+
+
+.solver-header p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   12. SELECTED TOPIC
+   ========================= */
+
+.selected-topic,
+.question-area {
+    margin-top: 18px;
+}
+
+
+.selected-topic label,
+.question-area label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+#selectedTopic {
+    padding: 12px 13px;
+
+    background: var(--soft);
+
+    color: var(--primary);
+
+    border-radius: 11px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+#questionBox {
+    padding: 14px;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   13. SOLUTION AREA
+   ========================= */
+
+.solution-area {
+    margin-top: 18px;
+
+    min-height: 180px;
+
+    padding: 18px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+}
+
+
+.solution-placeholder {
+    min-height: 145px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+.solution-placeholder span {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+.solution-placeholder h4 {
+    font-size: 15px;
+}
+
+
+.solution-placeholder p {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   14. QUICK TOPICS
+   ========================= */
+
+.quick-section {
+    margin-bottom: 35px;
+}
+
+
+.quick-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.quick-topic {
+    min-height: 52px;
+
+    padding: 10px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    text-align: left;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.quick-topic:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+
+.quick-topic:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   15. FOOTER
+   ========================= */
+
+.footer {
+    padding: 30px 10px 25px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+
+    margin-top: 10px;
+}
+
+
+.footer-logo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 10px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: 800;
+}
+
+
+.footer h3 {
+    font-size: 14px;
+}
+
+
+.footer p {
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.footer .copyright {
+    margin-top: 12px;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   16. SEARCH HIDDEN ITEMS
+   ========================= */
+
+.module-card.hidden {
+    display: none;
+}
+
+
+.no-results {
+    padding: 20px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   17. SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--muted);
+}
+
+
+/* =========================
+   18. DESKTOP RESPONSIVE
+   ========================= */
+
+@media (min-width: 700px) {
+
+    .header {
+        padding: 17px 35px;
+    }
+
+
+    .main-container {
+        padding: 35px 25px 0;
+    }
+
+
+    .welcome-section {
+        padding: 35px 5px 28px;
+    }
+
+
+    .welcome-section h2 {
+        font-size: 43px;
+    }
+
+
+    .welcome-text {
+        font-size: 15px;
+    }
+
+
+    .modules-section {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 13px;
+    }
+
+
+    .modules-section .section-heading {
+        grid-column: 1 / -1;
+    }
+
+
+    .module-card {
+        margin-bottom: 0;
+    }
+
+
+    .quick-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+
+    .solver-section {
+        padding: 25px;
+    }
+}
+
+
+/* =========================
+   19. LARGE DESKTOP
+   ========================= */
+
+@media (min-width: 1000px) {
+
+    .modules-section {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .welcome-section h2 {
+        font-size: 48px;
+    }
+
+
+    .module-card {
+        padding: 18px;
+    }
+
+
+    .module-info h4 {
+        font-size: 16px;
+    }
+
+
+    .module-info p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   20. SMALL MOBILE
+   ========================= */
+
+@media (max-width: 360px) {
+
+    .main-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .logo-area h1 {
+        font-size: 13px;
+    }
+
+
+    .logo-area p {
+        font-size: 9px;
+    }
+
+
+    .welcome-section h2 {
+        font-size: 27px;
+    }
+
+
+    .module-card {
+        padding: 12px;
+    }
+
+
+    .module-number {
+        min-width: 40px;
+        height: 40px;
+    }
+
+
+    .open-module {
+        width: 34px;
+        height: 34px;
+    }
+}
