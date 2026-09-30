@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Krishna's B.Tech Mathematics Solver</title>
+
+    <!-- CSS connection -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+
+        <div class="logo-area">
+            <div class="logo">K</div>
+
+            <div>
+                <h1>Krishna's Math Solver</h1>
+                <p>B.Tech 1st Semester Mathematics</p>
+            </div>
+        </div>
+
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <p class="small-title">
+                B.TECH CSE • 1ST SEMESTER
+            </p>
+
+            <h2>
+                Learn Mathematics<br>
+                <span>Step by Step.</span>
+            </h2>
+
+            <p class="welcome-text">
+                Select a topic, choose a question and understand
+                every step of the solution instead of memorizing
+                only the final answer.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH
+        ========================== -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search a topic or question..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MODULES
+        ========================== -->
+        <section class="modules-section">
+
+            <div class="section-heading">
+                <h3>Mathematics Modules</h3>
+
+                <p>
+                    Select a module to explore topics.
+                </p>
+            </div>
+
+
+            <!-- MODULE I -->
+            <div class="module-card">
+
+                <div class="module-number">
+                    I
+                </div>
+
+                <div class="module-info">
+
+                    <h4>
+                        Differential Calculus-I
+                    </h4>
+
+                    <p>
+                        Limits, continuity, Leibnitz theorem,
+                        envelopes and curve tracing.
+                    </p>
+
+                    <span class="topic-count">
+                        4 Topics
+                    </span>
+
+                </div>
+
+                <button
+                    class="open-module"
+                    data-module="module1">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- MODULE II -->
+            <div class="module-card">
+
+                <div class="module-number">
+                    II
+                </div>
+
+                <div class="module-info">
+
+                    <h4>
+                        Differential Calculus-II
+                    </h4>
+
+                    <p>
+                        Partial differentiation, Taylor series,
+                        extrema, Jacobians and errors.
+                    </p>
+
+                    <span class="topic-count">
+                        5 Topics
+                    </span>
+
+                </div>
+
+                <button
+                    class="open-module"
+                    data-module="module2">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- MODULE III -->
+            <div class="module-card">
+
+                <div class="module-number">
+                    III
+                </div>
+
+                <div class="module-info">
+
+                    <h4>
+                        Matrices
+                    </h4>
+
+                    <p>
+                        Inverse, rank, linear equations,
+                        eigenvalues and Cayley-Hamilton theorem.
+                    </p>
+
+                    <span class="topic-count">
+                        4 Topics
+                    </span>
+
+                </div>
+
+                <button
+                    class="open-module"
+                    data-module="module3">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- MODULE IV -->
+            <div class="module-card">
+
+                <div class="module-number">
+                    IV
+                </div>
+
+                <div class="module-info">
+
+                    <h4>
+                        Multivariable Calculus-I
+                    </h4>
+
+                    <p>
+                        Double integrals, change of variables,
+                        area, volume and triple integration.
+                    </p>
+
+                    <span class="topic-count">
+                        4 Topics
+                    </span>
+
+                </div>
+
+                <button
+                    class="open-module"
+                    data-module="module4">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- UNIT V -->
+            <div class="module-card">
+
+                <div class="module-number">
+                    V
+                </div>
+
+                <div class="module-info">
+
+                    <h4>
+                        Vector Calculus
+                    </h4>
+
+                    <p>
+                        Gradient, directional derivative,
+                        divergence, curl and integral theorems.
+                    </p>
+
+                    <span class="topic-count">
+                        2 Major Topics
+                    </span>
+
+                </div>
+
+                <button
+                    class="open-module"
+                    data-module="module5">
+                    →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOLVER AREA
+        ========================== -->
+        <section
+            id="solverSection"
+            class="solver-section">
+
+            <div class="solver-header">
+
+                <span class="solver-icon">
+                    🧮
+                </span>
+
+                <div>
+                    <h3>Step-by-Step Solver</h3>
+
+                    <p>
+                        Your solution will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Selected topic -->
+            <div class="selected-topic">
+
+                <label>
+                    Selected Topic
+                </label>
+
+                <div id="selectedTopic">
+                    Select a module above
+                </div>
+
+            </div>
+
+
+            <!-- Question area -->
+            <div class="question-area">
+
+                <label>
+                    Question
+                </label>
+
+                <div id="questionBox">
+                    No question selected yet.
+                </div>
+
+            </div>
+
+
+            <!-- Solution -->
+            <div
+                id="solutionArea"
+                class="solution-area">
+
+                <div class="solution-placeholder">
+
+                    <span>📖</span>
+
+                    <h4>
+                        Step-by-step solution
+                    </h4>
+
+                    <p>
+                        Choose a question to start learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK TOPICS
+        ========================== -->
+        <section class="quick-section">
+
+            <div class="section-heading">
+
+                <h3>
+                    Quick Topics
+                </h3>
+
+                <p>
+                    Frequently studied concepts
+                </p>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <button class="quick-topic">
+                    ∇ Gradient
+                </button>
+
+                <button class="quick-topic">
+                    ∇·A Divergence
+                </button>
+
+                <button class="quick-topic">
+                    ∇×A Curl
+                </button>
+
+                <button class="quick-topic">
+                    Rank of Matrix
+                </button>
+
+                <button class="quick-topic">
+                    Eigenvalues
+                </button>
+
+                <button class="quick-topic">
+                    Jacobian
+                </button>
+
+                <button class="quick-topic">
+                    Double Integral
+                </button>
+
+                <button class="quick-topic">
+                    Line Integral
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+        <footer class="footer">
+
+            <div class="footer-logo">
+                K
+            </div>
+
+            <h3>
+                Krishna's B.Tech Mathematics Solver
+            </h3>
+
+            <p>
+                Learn • Understand • Solve
+            </p>
+
+            <p class="copyright">
+                © 2026 Krishna Tharu
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript connection -->
+    <script src="script.js"></script>
+
+</body>
+</html>
